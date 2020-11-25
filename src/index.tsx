@@ -1,8 +1,14 @@
 import * as ReactDOM from "react-dom";
 import * as React from "react";
-import { MainPage } from "./page/Main/Main";
-import moment from "moment";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {SearchPage} from "./page/SearchPage/SearchPage";
+import {DetailsPage} from "./page/DetailsPage/DetailsPage";
 
-moment.locale("nn");
+const Main = () => <BrowserRouter>
+  <Switch>
+    <Route path="/details" component={DetailsPage}/>
+    <Route path="/" component={SearchPage}/>
+  </Switch>
+</BrowserRouter>
 
-ReactDOM.render(<MainPage />, document.getElementById("root"));
+ReactDOM.render(<Main />, document.getElementById("root"));

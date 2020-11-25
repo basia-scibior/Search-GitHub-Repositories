@@ -1,4 +1,7 @@
-export const lightGrey = "#cccdd7";
-export const grey = "#7f808d";
-export const pink = "#ff7aa8";
+
+export const lightGrey = "#b8b7ca";
+export const pink = "#fd507e";
 export const blue = "#364174";
+export const grey = "#3D3E4E";
+
+

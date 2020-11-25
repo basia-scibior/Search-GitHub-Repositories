@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const DotenvWebpackPlugin = require('dotenv-webpack');
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -27,10 +28,14 @@ module.exports = {
   devServer: {
     contentBase: "./dist",
     port: 3000,
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
+    new DotenvWebpackPlugin({
+      safe: true
+    })
   ],
 };
