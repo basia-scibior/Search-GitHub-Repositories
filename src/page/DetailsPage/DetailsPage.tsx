@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import {
   Container,
   Content,
@@ -12,25 +12,16 @@ import {
 } from "./DetailsPage.styles";
 import { getRepository } from "../../api/repository";
 import { useParams } from "react-router";
-import { Repository } from "../../models/Repository";
 import { Stars } from "../../component/Stars/Stars";
+import { useQuery } from "react-query";
 
 export const DetailsPage: FC = () => {
-  const [repository, setRepository] = useState<Repository>();
-
   const { ownerName, repoName } = useParams();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const repository = await getRepository(ownerName, repoName);
-        setRepository(repository);
-      } catch (error) {
-        console.log("error", error);
-      }
-    };
-    fetchData();
-  }, []);
+  const { data: repository } = useQuery(
+    ["get-repository", ownerName, repoName],
+    () => getRepository(ownerName, repoName)
+  );
 
   return (
     <Container>

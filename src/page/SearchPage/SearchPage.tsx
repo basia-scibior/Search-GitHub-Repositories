@@ -12,7 +12,7 @@ export const SearchPage: FC = () => {
   const [debouncedQuery] = useDebounce(query, 500);
 
   const { data, isLoading, refetch } = useQuery(
-    [debouncedQuery],
+    ["search-repositories", debouncedQuery],
     () => searchRepositories(debouncedQuery),
     { enabled: debouncedQuery !== "" }
   );

@@ -9,6 +9,7 @@ export const Title = styled.h1`
   color: white;
   opacity: 0.9;
   text-align: center;
+  margin-top: 40px;
 `;
 
 export const Content = styled.div`

@@ -7,14 +7,12 @@ interface SearchProps {
   onChange: (inputText: string) => void;
 }
 
-export const Search: FC<SearchProps> = (props) => {
-  return (
-    <Container>
-      <StyledInput
-        placeholder="Search"
-        value={props.value}
-        onChange={(e) => props.onChange(e.target.value)}
-      />
-    </Container>
-  );
-};
+export const Search: FC<SearchProps> = (props) => (
+  <Container>
+    <StyledInput
+      placeholder="Search"
+      value={props.value}
+      onChange={(e) => props.onChange(e.target.value)}
+    />
+  </Container>
+);

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { blue, lightGrey } from "../../theme";
 import { Link } from "react-router-dom";
 
-export const Container = styled(Link)`
+export const ContainerAsLink = styled(Link)`
   width: 60%;
   min-height: 70px;
   margin: 10px 0;
