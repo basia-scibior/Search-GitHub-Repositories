@@ -1,8 +1,8 @@
 import * as React from "react";
 import { FC } from "react";
 import { SearchItem } from "../../component/SearchItem/SearchItem";
-import {Repository} from "../../models/Repository";
-import {CenterMessage} from "./SearchItems.styles";
+import { Repository } from "../../models/Repository";
+import { CenterMessage } from "./SearchItems.styles";
 
 interface SearchItemsProps {
   repositories: Repository[];
@@ -10,7 +10,11 @@ interface SearchItemsProps {
   hasQuery: boolean;
 }
 
-export const SearchItems: FC<SearchItemsProps> = ({repositories, isLoading, hasQuery}) => {
+export const SearchItems: FC<SearchItemsProps> = ({
+  repositories,
+  isLoading,
+  hasQuery,
+}) => {
   if (!hasQuery) {
     return <CenterMessage>Start typing to see results</CenterMessage>;
   } else if (isLoading) {
@@ -21,8 +25,10 @@ export const SearchItems: FC<SearchItemsProps> = ({repositories, isLoading, hasQ
 
   return (
     <>
-      {repositories && repositories.map((repository) => <SearchItem key={repository.id} repository={repository}/>)}
+      {repositories &&
+        repositories.map((repository) => (
+          <SearchItem key={repository.id} repository={repository} />
+        ))}
     </>
-  )
-}
-
+  );
+};

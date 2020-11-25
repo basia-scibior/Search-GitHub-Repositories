@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {pink} from "../../theme";
+import { pink } from "../../theme";
 
 export const Container = styled.main`
   width: 100%;
@@ -36,5 +36,5 @@ export const Button = styled.button`
   background-color: ${pink};
   opacity: 0.9;
   border-radius: 7px;
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 `;

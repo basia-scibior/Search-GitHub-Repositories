@@ -54,3 +54,23 @@ export const Owner = styled.p`
     font-size: 14px;
   }
 `;
+
+export const Rating = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const StarsNumber = styled.span`
+  font-size: 18px;
+  color: ${lightGrey};
+`;
+
+export const Star = styled.img`
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+  @media (max-width: 411px) {
+    margin-right: 10px;
+  }
+`;

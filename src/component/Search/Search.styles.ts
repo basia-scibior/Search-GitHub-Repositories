@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {grey} from "../../theme";
+import { grey } from "../../theme";
 
 export const Container = styled.div`
   margin: 30px 0;

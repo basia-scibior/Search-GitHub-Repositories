@@ -1,7 +1,7 @@
 {
   "name": "frontend-assignment",
   "version": "1.0.0",
-  "description": "frontend assignment task js",
+  "description": "frontend task",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "build": "webpack",
     "format": "prettier --write \"./**/*.{js,md,yml,json,ts,tsx}\""
   },
-  "author": "STP",
+  "author": "Basia",
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/react": "^16.9.34",
@@ -25,7 +25,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "main": "index.js",
-  "repository": "https://github.com/basia-scibior/schibsted-task.git",
+  "repository": "https://github.com/basia-scibior/Search-GitHub-Repositories.git",
   "dependencies": {
     "@types/qs": "^6.9.5",
     "@types/react-query": "^1.1.2",

@@ -4,6 +4,10 @@ export type Repository = {
   stargazers_count: number;
   language: string;
   owner: {
-    login: string
-  }
+    avatar_url: string;
+    login: string;
+  };
+  description: string;
+  forks: number;
+  open_issues: number;
 };

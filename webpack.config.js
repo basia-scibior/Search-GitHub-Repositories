@@ -1,11 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const DotenvWebpackPlugin = require('dotenv-webpack');
+const DotenvWebpackPlugin = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
@@ -28,14 +29,14 @@ module.exports = {
   devServer: {
     contentBase: "./dist",
     port: 3000,
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
     new DotenvWebpackPlugin({
-      safe: true
-    })
+      safe: true,
+    }),
   ],
 };

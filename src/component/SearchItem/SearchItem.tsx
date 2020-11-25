@@ -3,32 +3,30 @@ import * as React from "react";
 import {
   Container,
   Name,
-  UserName,
-  Star,
+  Owner,
   Row,
   Language,
-  StarsNumber,
-  Rating, Details,
+  Details,
 } from "./SearchItem.styles";
-import {Repository} from "../../models/Repository";
-import starUrl from "../../images/star.png";
+import { Repository } from "../../models/Repository";
+import { Stars } from "../Stars/Stars";
 
 interface SearchItemProps {
-  repository: Repository
+  repository: Repository;
 }
 
 export const SearchItem: FC<SearchItemProps> = ({ repository }) => {
   return (
-    <Container to="/details">
+    <Container to={`/details/${repository.owner.login}/${repository.name}`}>
       <Row>
-          <Name>{repository.name}</Name>
-        <Rating>
-          <Star src={starUrl} />
-          <StarsNumber>{repository.stargazers_count}</StarsNumber>
-        </Rating>
+        <Name>{repository.name}</Name>
+        <Stars number={repository.stargazers_count} />
       </Row>
 
-        <Details><UserName>{repository.owner.login}</UserName> <Language>&bull; {repository.language}</Language></Details>
+      <Details>
+        <Owner>{repository.owner.login}</Owner>{" "}
+        <Language>&bull; {repository.language}</Language>
+      </Details>
     </Container>
   );
 };

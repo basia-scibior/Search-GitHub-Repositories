@@ -1,50 +1,63 @@
 import styled from "styled-components";
-import {pink} from "../../theme";
+import { lightGrey, pink } from "../../theme";
 
 export const Container = styled.main`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 
 export const Title = styled.h1`
-  color: white;
-  opacity: 0.9;
-  text-align: center;
+  color: ${pink};
 `;
 
 export const Content = styled.div`
-    width: 60%;
-  min-height: 70px;
+  height: 400px;
+  width: 60%;
   margin: 10px 0;
   background-color: white;
-  padding: 20px;
+  padding: 0 40px;
   border-radius: 5px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  justify-content: space-evenly;
+`;
+
+export const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   @media (max-width: 750px) {
-    width: 85%;
+    display: unset;
   }
 `;
 
-export const Top = styled.div`
-  width: 100%;
+export const Row = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  background-color: ${pink};
-  margin-bottom: 20px;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  @media (max-width: 750px) {
+    display: unset;
+  }
 `;
 
-export const Button = styled.button`
-  color: white;
-  padding: 15px 30px;
-  background-color: ${pink};
-  opacity: 0.9;
-  border-radius: 7px;
-    margin-bottom: 10px;
+export const Text = styled.span`
+  color: ${lightGrey};
+  font-size: 18px;
+`;
+
+export const Owner = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Logo = styled.img`
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
 `;

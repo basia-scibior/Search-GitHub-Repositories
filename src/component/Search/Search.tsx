@@ -1,6 +1,6 @@
 import { FC } from "react";
 import * as React from "react";
-import {Container, StyledInput} from "./Search.styles";
+import { Container, StyledInput } from "./Search.styles";
 
 interface SearchProps {
   value: any;
@@ -13,7 +13,7 @@ export const Search: FC<SearchProps> = (props) => {
       <StyledInput
         placeholder="Search"
         value={props.value}
-        onChange={e => props.onChange(e.target.value)}
+        onChange={(e) => props.onChange(e.target.value)}
       />
     </Container>
   );
